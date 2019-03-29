@@ -28,6 +28,6 @@ const Tab = props => {
 export default Tab;
 
 Tab.propTypes = {
-  tab:PropTypes.number,
+  tab:PropTypes.string,
   selectedTab:PropTypes.string
 }

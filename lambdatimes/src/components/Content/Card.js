@@ -1,5 +1,6 @@
 import React from 'react';
 import '../../CSS/index.css';
+import PropTypes from 'prop-types';
 
 const Card = ({passedCard}) => {
   return (
@@ -15,6 +16,16 @@ const Card = ({passedCard}) => {
   );
 };
 
+Card.propTypes ={
+  
+  
+  passedCard:
+    PropTypes.objectOf(
+      PropTypes.string
+    
+    )
+  
+}
 // Make sure to include PropTypes.
 
 export default Card;
