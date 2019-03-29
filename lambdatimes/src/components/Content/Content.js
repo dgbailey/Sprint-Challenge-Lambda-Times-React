@@ -4,6 +4,7 @@ import Tabs from './Tabs';
 import Cards from './Cards';
 import '../../CSS/index.css';
 import PropTypes from 'prop-types';
+import Carousel from '../Carousel/Carousel';
 
 // Importing our tab and card data. No need to change anything here.
 import { tabData, cardData } from '../../data';
@@ -66,6 +67,7 @@ export default class Content extends Component {
           and `selectTabHandler` that includes the function to change the selected tab
         */}
         <Tabs tabs={this.state.tabs} selectedTab={this.state.selected} selectTabHandler={this.changeSelected}/>
+          <Carousel/>
         <Cards cardList={this.state.cards} cards={this.filterCards()} />
       </div>
     );
