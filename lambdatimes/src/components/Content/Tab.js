@@ -1,5 +1,6 @@
 import React from 'react';
 import '../../CSS/index.css';
+import PropTypes from 'prop-types';
 
 const Tab = props => {
   let name = 'tab';
@@ -25,3 +26,8 @@ const Tab = props => {
 // Make sure you include PropTypes on your props.
 
 export default Tab;
+
+Tab.propTypes = {
+  tab:PropTypes.number,
+  selectedTab:PropTypes.string
+}
