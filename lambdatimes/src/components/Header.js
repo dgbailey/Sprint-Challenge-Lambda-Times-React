@@ -30,7 +30,7 @@ const SHeader = styled.div`
     color: #000;
   }
 
-  .span{
+  span{
     align-self: flex-end;
     font-size: 11px;
     font-weight: bold;
