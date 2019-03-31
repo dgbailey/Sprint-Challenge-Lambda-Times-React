@@ -3,7 +3,9 @@ import Tab from './Tab';
 import '../../CSS/index.css';
 import PropTypes from 'prop-types';
 const Tabs = props => {
+  console.log('returning tabS Js')
   return (
+    
     <div className="tabs">
       <div className="topics">
         <span className="title">TRENDING TOPICS:</span>

@@ -3,6 +3,7 @@ import '../../CSS/index.css';
 import PropTypes from 'prop-types';
 
 const Tab = props => {
+  console.log('returning tab Js')
   let name = 'tab';
   if (props.selectedTab == props.tab){
     name = 'tab active-tab';
@@ -11,6 +12,7 @@ const Tab = props => {
       if they match, the className should be: 'tab active-tab', 
       if it is not it should just be 'tab'*/
   return (
+    
     <div
       className={name}
       onClick={() => {props.selectTabHandler(props.tab)}}

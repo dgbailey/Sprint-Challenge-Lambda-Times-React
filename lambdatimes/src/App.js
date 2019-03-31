@@ -4,6 +4,7 @@ import Header from './components/Header';
 import Content from './components/Content/Content';
 
 const App = () => {
+  console.log('rendering APP JS')
   return (
     <div className="App">
       <TopBar />

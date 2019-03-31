@@ -53,7 +53,9 @@ const Date = styled.span`
 `
 
 const Header = () => {
+  console.log('returning header Js')
   return (
+    
     <SHeader>
       <Date>SMARCH 32, 2018</Date>
       <h1>Lambda Times</h1>

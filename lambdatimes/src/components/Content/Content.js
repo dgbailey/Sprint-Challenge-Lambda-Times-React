@@ -21,6 +21,7 @@ export default class Content extends Component {
 
   componentDidMount() {
     // Once the component has mounted, get the data and reflect that data on the state.
+    console.log('component did mount Content Js')
     this.setState({tabs:tabData})
     this.setState({cards:cardData})
   }
@@ -59,6 +60,7 @@ export default class Content extends Component {
   };
 
   render() {
+    console.log('render function on content JS')
     return (
       <div className="content-container">
         {/* 

@@ -79,7 +79,9 @@ const Rcontainer = styled.div`
 
 
 const TopBar = () => {
+  console.log('returning top bar Js')
   return (
+    
     <Tb>
       <Container>
         <Lcontainer>

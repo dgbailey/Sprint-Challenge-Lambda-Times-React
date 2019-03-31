@@ -3,7 +3,9 @@ import Card from './Card';
 import '../../CSS/index.css';
 import PropTypes from 'prop-types';
 const Cards = props => {
+  console.log('returning cards');
   return (
+    
     <div className="cards-container">
     {props.cards.map(currentValue => <Card passedCard={currentValue}/>)}
       {/* Using the cards prop, map over the list creating a 
