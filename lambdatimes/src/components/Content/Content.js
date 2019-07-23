@@ -2,6 +2,9 @@ import React, { Component } from 'react';
 
 import Tabs from './Tabs';
 import Cards from './Cards';
+import '../../CSS/index.css';
+import PropTypes from 'prop-types';
+import Carousel from '../Carousel/Carousel';
 
 // Importing our tab and card data. No need to change anything here.
 import { tabData, cardData } from '../../data';
@@ -18,13 +21,29 @@ export default class Content extends Component {
 
   componentDidMount() {
     // Once the component has mounted, get the data and reflect that data on the state.
+    console.log('component did mount Content Js')
+    this.setState({tabs:tabData})
+    this.setState({cards:cardData})
   }
 
   changeSelected = tab => {
+    this.setState({selected:tab});
     // this function should take in the tab and update the state with the new tab.
   };
 
   filterCards = () => {
+    
+    console.log('my card data',cardData);
+    
+    
+    if (this.state.selected === 'all'){
+       return cardData
+    }
+
+    else{
+       return cardData.filter(currentValue=>currentValue.tab === this.state.selected)
+      
+    }
     /* Right now this function only returns the cards on state.
       We're going to make this function more dynamic
       by using it to filter out our cards for when a tab is selcted
@@ -37,10 +56,11 @@ export default class Content extends Component {
           of the items from cardData. 
         - else, it should only return those cards whose 'tab' matched this.state.selected.
     */
-    return this.state.cards;
+   
   };
 
   render() {
+    console.log('render function on content JS')
     return (
       <div className="content-container">
         {/* 
@@ -48,9 +68,12 @@ export default class Content extends Component {
           `selectedTab` that includes the currently selected tab
           and `selectTabHandler` that includes the function to change the selected tab
         */}
-        <Tabs tabs={this.state.tabs} />
-        <Cards cards={this.filterCards()} />
+        <Tabs tabs={this.state.tabs} selectedTab={this.state.selected} selectTabHandler={this.changeSelected}/>
+          <Carousel/>
+        <Cards cardList={this.state.cards} cards={this.filterCards()} />
       </div>
     );
   }
 }
+
+
